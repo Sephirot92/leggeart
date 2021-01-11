@@ -35,7 +35,7 @@ public class Lawsuit {
     @Column(name = "DEFENDANT", nullable = false)
     private String defendant;
 
-    @Column(name = "defendantRepresentative")
+    @Column(name = "DEFENDANTREPRESENTATIVE")
     private String defendantRepresentative;
 
     @Column (name = "SUBJECT", nullable = false)

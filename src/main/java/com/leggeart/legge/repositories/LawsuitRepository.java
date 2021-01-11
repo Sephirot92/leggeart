@@ -23,4 +23,10 @@ public interface LawsuitRepository extends JpaRepository<Lawsuit, Long> {
 
     @Override
     Optional<Lawsuit> findById(Long id);
+
+    @Override
+    Lawsuit save(Lawsuit lawsuit);
+
+    @Override
+    void deleteById(Long aLong);
 }
