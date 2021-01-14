@@ -7,7 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+/**
+ Service class to handle Lawsuit class.
 
+ @version 0.0.1
+ @author LC
+ */
 @Service
 public class LawsuitService {
 
