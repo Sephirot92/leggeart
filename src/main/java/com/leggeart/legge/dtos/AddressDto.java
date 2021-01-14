@@ -1,16 +1,17 @@
 package com.leggeart.legge.dtos;
 
 /**
- Dto class to handle Address class.
-
- @version 0.0.1
- @author ACh
+ * Dto class to handle Address class.
+ *
+ * @author ACh
+ * @version 0.0.2
  */
 public class AddressDto {
 
     private long id;
     private String street;
     private int streetNo;
+    private int flatNo;
     private String city;
     private String zipCode;
     private String country;
@@ -18,10 +19,11 @@ public class AddressDto {
     public AddressDto() {
     }
 
-    public AddressDto(long id, String street, int streetNo, String city, String zipCode, String country) {
+    public AddressDto(long id, String street, int flatNo, int streetNo, String city, String zipCode, String country) {
         this.id = id;
         this.street = street;
         this.streetNo = streetNo;
+        this.flatNo = flatNo;
         this.city = city;
         this.zipCode = zipCode;
         this.country = country;
@@ -37,6 +39,10 @@ public class AddressDto {
 
     public int getStreetNo() {
         return streetNo;
+    }
+
+    public int getFlatNo() {
+        return flatNo;
     }
 
     public String getCity() {
@@ -61,6 +67,10 @@ public class AddressDto {
 
     public void setStreetNo(int streetNo) {
         this.streetNo = streetNo;
+    }
+
+    public void setFlatNo(int flatNo) {
+        this.flatNo = flatNo;
     }
 
     public void setCity(String city) {
