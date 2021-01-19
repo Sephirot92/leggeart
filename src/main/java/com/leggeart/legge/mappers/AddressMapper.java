@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- Mapper class to handle Address class.
-
- @version 0.0.1
- @author ACh
+ * Mapper class to handle Address class.
+ *
+ * @author ACh
+ * @version 0.0.1
  */
 @Component
 public class AddressMapper {
@@ -21,21 +21,21 @@ public class AddressMapper {
     @Autowired
     private ModelMapper modelMapper;
 
-    public Address mapToAddress (final AddressDto addressDto){
+    public Address mapToAddress(final AddressDto addressDto) {
         return modelMapper.map(addressDto, Address.class);
     }
 
-    public AddressDto mapToAddressDto (final Address address){
+    public AddressDto mapToAddressDto(final Address address) {
         return modelMapper.map(address, AddressDto.class);
     }
 
-    public List<Address> mapToAddressList (List<AddressDto> addressDtoList){
+    public List<Address> mapToAddressList(List<AddressDto> addressDtoList) {
         return addressDtoList.stream()
                 .map(this::mapToAddress)
                 .collect(Collectors.toList());
     }
 
-    public List<AddressDto> mapToAddressDtoList (List<Address> addressList){
+    public List<AddressDto> mapToAddressDtoList(List<Address> addressList) {
         return addressList.stream()
                 .map(this::mapToAddressDto)
                 .collect(Collectors.toList());
