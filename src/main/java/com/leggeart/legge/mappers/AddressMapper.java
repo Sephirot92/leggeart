@@ -7,13 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
  * Mapper class to handle Address class.
  *
  * @author ACh
- * @version 0.0.1
+ * @version 0.0.2
  */
 @Component
 public class AddressMapper {
@@ -39,5 +40,17 @@ public class AddressMapper {
         return addressList.stream()
                 .map(this::mapToAddressDto)
                 .collect(Collectors.toList());
+    }
+
+    public Set<Address> mapToAddressSet(Set<AddressDto> addressDtoSet) {
+        return addressDtoSet.stream()
+                .map(this::mapToAddress)
+                .collect(Collectors.toSet());
+    }
+
+    public Set<AddressDto> mapToAddressDtoSet(Set<Address> addressSet) {
+        return addressSet.stream()
+                .map(this::mapToAddressDto)
+                .collect(Collectors.toSet());
     }
 }
