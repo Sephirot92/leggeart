@@ -1,6 +1,7 @@
 package com.leggeart.legge.repositories;
 
 import com.leggeart.legge.entities.Address;
+import com.leggeart.legge.entities.Court;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,23 +10,23 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Repository class to handle Address class.
+ * Repository class to handle Court class.
  *
  * @author ACh
- * @version 0.0.2
+ * @version 0.0.1
  */
 @Transactional
 @Repository
-public interface AddressRepository extends JpaRepository<Address, Long> {
+public interface CourtRepository extends JpaRepository<Court, Long> {
 
     @Override
-    List<Address> findAll();
+    List<Court> findAll();
 
     @Override
-    Optional<Address> findById(Long id);
+    Optional<Court> findById(Long id);
 
     @Override
-    Address save(Address address);
+    Court save(Court court);
 
     @Override
     void deleteById(Long id);

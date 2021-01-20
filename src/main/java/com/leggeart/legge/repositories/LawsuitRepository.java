@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- Repository class to handle Lawsuit class.
-
- @version 0.0.1
- @author LC
+ * Repository class to handle Lawsuit class.
+ *
+ * @author LC
+ * @version 0.0.1
  */
 @Transactional
 @Repository
@@ -28,5 +28,5 @@ public interface LawsuitRepository extends JpaRepository<Lawsuit, Long> {
     Lawsuit save(Lawsuit lawsuit);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }

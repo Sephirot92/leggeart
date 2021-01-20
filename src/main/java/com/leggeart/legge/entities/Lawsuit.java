@@ -3,7 +3,6 @@ package com.leggeart.legge.entities;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  Class responsible for handling Lawsuit object. Contains all data connected
